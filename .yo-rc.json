@@ -1,0 +1,9 @@
+{
+  "generator-node": {
+    "promptValues": {
+      "authorName": "tech@seedrs.com",
+      "authorEmail": "tech@seedrs.com",
+      "authorUrl": "www.seedrs.com"
+    }
+  }
+}
