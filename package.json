@@ -1,6 +1,6 @@
 {
   "name": "@seedrs/generator-seedrs-react",
-  "version": "0.0.0",
+  "version": "0.0.0-semantic-release",
   "description": "Bootstraps a Seedrs react application",
   "author": {
     "name": "Seedrs",
@@ -54,9 +54,10 @@
   "scripts": {
     "lint": "eslint .",
     "test": "jest",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "semantic-release": "semantic-release --no-ci -b $BUILDKITE_JOB_ID"
   },
-  "repository": "seedrs/generator-seedrs-react",
+  "repository": "https://github.com/Seedrs/generator-seedrs-react.git",
   "license": "Apache-2.0",
   "config": {
     "commitizen": {
