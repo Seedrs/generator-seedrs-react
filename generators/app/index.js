@@ -17,7 +17,7 @@ module.exports = class extends Generator {
     const kebabCaseName = _.kebabCase(name);
 
     this.composeWith('generator-node/generators/git');
-    this.composeWith(require.resolve('../buildkite'), { kebabCaseName });
+    this.composeWith(require.resolve('../buildkite'), { kebabCaseName, snakeCaseName });
     this.composeWith(require.resolve('../webpack'), { kebabCaseName, snakeCaseName, port, embeddable });
     this.composeWith(require.resolve('../public'), { kebabCaseName, embeddable });
     this.composeWith(require.resolve('../scripts'));

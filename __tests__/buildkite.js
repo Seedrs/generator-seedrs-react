@@ -7,7 +7,8 @@ describe('generator-seedrs-react:buildkite', () => {
   beforeAll(() => helpers
   .run(path.join(__dirname, '../generators/buildkite'))
   .withOptions({
-    kebabCaseName: 'seedrs-react-project'
+    kebabCaseName: 'seedrs-react-project',
+    snakeCaseName: 'seedrs_react_project'
   }));
 
   it('creates files', () => {
@@ -15,6 +16,19 @@ describe('generator-seedrs-react:buildkite', () => {
       './.buildkite/pipeline.yml',
       './.buildkite/steps/lint.sh',
       './.buildkite/steps/test.sh'
+    ]);
+  });
+
+  it('creates files with the correct output', () => {
+    assert.fileContent([
+      [
+        './.buildkite/pipeline.yml',
+        'run: seedrs_react_project'
+      ],
+      [
+        './.buildkite/pipeline.yml',
+        'queue: seedrs-react-project-agent'
+      ]
     ]);
   });
 });

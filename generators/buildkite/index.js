@@ -6,7 +6,10 @@ module.exports = class extends Generator {
     this.fs.copyTpl(
       this.templatePath('pipeline.yml.tpl'),
       this.destinationPath('./.buildkite/pipeline.yml'),
-      { kebabCaseName: this.options.kebabCaseName }
+      {
+        kebabCaseName: this.options.kebabCaseName,
+        snakeCaseName: this.options.snakeCaseName
+      }
     );
 
     this.fs.copy(
