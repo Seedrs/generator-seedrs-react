@@ -4,10 +4,8 @@ const assert = require('yeoman-assert');
 const helpers = require('yeoman-test');
 
 describe('generator-seedrs-react:scripts', () => {
-  beforeAll(() => {
-    return helpers
-      .run(path.join(__dirname, '../generators/scripts'))
-  });
+  beforeAll(() => helpers
+  .run(path.join(__dirname, '../generators/scripts')));
 
   it('creates files', () => {
     assert.file([

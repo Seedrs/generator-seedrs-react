@@ -2,7 +2,7 @@
 const Generator = require('yeoman-generator');
 
 module.exports = class extends Generator {
-  writing() {
+  writing () {
     if (!this.options.embeddable) {
       this.fs.copyTpl(
         this.templatePath('index.html.tpl'),

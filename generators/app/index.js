@@ -25,7 +25,7 @@ module.exports = class extends Generator {
     this.composeWith(require.resolve('../jest'));
   }
 
-  prompting() {
+  prompting () {
     this.log(
       yosay(`Welcome to the smashing ${chalk.red('generator-seedrs-react')} generator!`)
     );
@@ -51,12 +51,12 @@ module.exports = class extends Generator {
       }
     ];
 
-    return this.prompt(prompts).then(props => {
+    return this.prompt(prompts).then((props) => {
       this.props = props;
     });
   }
 
-  writing() {
+  writing () {
     const {
       name,
       embeddable

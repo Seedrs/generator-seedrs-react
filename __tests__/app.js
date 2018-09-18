@@ -5,14 +5,12 @@ const helpers = require('yeoman-test');
 
 describe('generator-seedrs-react:app', () => {
   describe('when embeddable is false', () => {
-    beforeAll(() => {
-      return helpers
-        .run(path.join(__dirname, '../generators/app'))
-        .withPrompts({
-          name: 'seedrs-react-project',
-          embeddable: false
-        });
-    });
+    beforeAll(() => helpers
+    .run(path.join(__dirname, '../generators/app'))
+    .withPrompts({
+      name: 'seedrs-react-project',
+      embeddable: false
+    }));
 
     it('creates files', () => {
       assert.file([
@@ -36,12 +34,12 @@ describe('generator-seedrs-react:app', () => {
       assert.JSONFileContent('package.json',{
         name: 'seedrs-react-project',
         scripts: {
-          'start': 'webpack-dev-server --config config/webpack.development.js --hot --inline',
-          'lint': 'eslint src/**/*.js',
-          'test': 'node scripts/test.js --env=jsdom'
+          start: 'webpack-dev-server --config config/webpack.development.js --hot --inline',
+          lint: 'eslint src/**/*.js',
+          test: 'node scripts/test.js --env=jsdom'
         },
         dependencies: {
-          'normalizr': '^3.2.4',
+          normalizr: '^3.2.4',
           polished: '^1.9.2',
           'prop-types': '^15.6.1',
           react: '^16.5.1',
@@ -66,7 +64,7 @@ describe('generator-seedrs-react:app', () => {
           'compression-webpack-plugin': '^1.1.11',
           enzyme: '^3.3.0',
           'enzyme-adapter-react-16': '^1.1.1',
-          'eslint': '^5.6.0',
+          eslint: '^5.6.0',
           'eslint-import-resolver-webpack': '^0.9.0',
           'eslint-loader': '^2.0.0',
           'eslint-plugin-import': '^2.11.0',
@@ -86,13 +84,13 @@ describe('generator-seedrs-react:app', () => {
             '<rootDir>/src/**/__tests__/**/*.{js,jsx,mjs}',
             '<rootDir>/src/**/?(*.)(spec|test).{js,jsx,mjs}'
           ],
-          testEnvironment: "node",
-          testURL: "http://localhost",
+          testEnvironment: 'node',
+          testURL: 'http://localhost',
           transformIgnorePatterns: [
-            "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs)$"
+            '[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs)$'
           ],
           setupFiles: [
-            "<rootDir>/node_modules/regenerator-runtime/runtime"
+            '<rootDir>/node_modules/regenerator-runtime/runtime'
           ],
           moduleNameMapper: {
             '^actions(.+)': '<rootDir>/src/actions$1',
@@ -120,21 +118,19 @@ describe('generator-seedrs-react:app', () => {
   });
 
   describe('embeddable is true', () => {
-    beforeAll(() => {
-      return helpers
-        .run(path.join(__dirname, '../generators/app'))
-        .withPrompts({
-          name: 'seedrs-react-project',
-          embeddable: true
-        });
-    });
+    beforeAll(() => helpers
+    .run(path.join(__dirname, '../generators/app'))
+    .withPrompts({
+      name: 'seedrs-react-project',
+      embeddable: true
+    }));
 
     it('creates package.json', () => {
       assert.JSONFileContent('package.json',{
         devDependencies: {
           '@seedrs/bundle-script-tag-plugin': '^1.0.3'
         }
-      })
+      });
     });
   });
 });

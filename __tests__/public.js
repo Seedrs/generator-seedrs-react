@@ -5,14 +5,12 @@ const helpers = require('yeoman-test');
 
 describe('generator-seedrs-react:public', () => {
   describe('when embeddable is false', () => {
-    beforeAll(() => {
-      return helpers
-        .run(path.join(__dirname, '../generators/public'))
-        .withOptions({
-          kebabCaseName: 'seedrs-react-project',
-          embeddable: false
-        });
-    });
+    beforeAll(() => helpers
+    .run(path.join(__dirname, '../generators/public'))
+    .withOptions({
+      kebabCaseName: 'seedrs-react-project',
+      embeddable: false
+    }));
 
     it('creates the index.html file', () => {
       assert.file('./public/index.html');
@@ -24,14 +22,12 @@ describe('generator-seedrs-react:public', () => {
   });
 
   describe('when embeddable is true', () => {
-    beforeAll(() => {
-      return helpers
-        .run(path.join(__dirname, '../generators/public'))
-        .withOptions({
-          kebabCaseName: 'seedrs-react-project',
-          embeddable: true
-        });
-    });
+    beforeAll(() => helpers
+    .run(path.join(__dirname, '../generators/public'))
+    .withOptions({
+      kebabCaseName: 'seedrs-react-project',
+      embeddable: true
+    }));
 
     it('does not create the index.html file', () => {
       assert.noFile('./public/index.html');

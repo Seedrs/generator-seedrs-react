@@ -5,16 +5,14 @@ const helpers = require('yeoman-test');
 
 describe('generator-seedrs-react:webpack', () => {
   describe('when embeddable is false', () => {
-    beforeAll(() => {
-      return helpers
-        .run(path.join(__dirname, '../generators/webpack'))
-        .withOptions({
-          kebabCaseName: 'seedrs-react-project',
-          snakeCaseName: 'seedrs_react_project',
-          port: 8080,
-          embeddable: false
-        });
-    });
+    beforeAll(() => helpers
+    .run(path.join(__dirname, '../generators/webpack'))
+    .withOptions({
+      kebabCaseName: 'seedrs-react-project',
+      snakeCaseName: 'seedrs_react_project',
+      port: 8080,
+      embeddable: false
+    }));
 
     it('creates files', () => {
       assert.file([
@@ -58,16 +56,14 @@ describe('generator-seedrs-react:webpack', () => {
   });
 
   describe('when embeddable is true', () => {
-    beforeAll(() => {
-      return helpers
-        .run(path.join(__dirname, '../generators/webpack'))
-        .withOptions({
-          kebabCaseName: 'seedrs-react-project',
-          snakeCaseName: 'seedrs_react_project',
-          port: 8080,
-          embeddable: true
-        });
-    });
+    beforeAll(() => helpers
+    .run(path.join(__dirname, '../generators/webpack'))
+    .withOptions({
+      kebabCaseName: 'seedrs-react-project',
+      snakeCaseName: 'seedrs_react_project',
+      port: 8080,
+      embeddable: true
+    }));
 
     it('creates paths.js without a reference to appHtml', () => {
       assert.noFileContent('./config/paths.js','appHtml: resolveApp(\'public/index.html\')');

@@ -2,7 +2,7 @@
 const Generator = require('yeoman-generator');
 
 module.exports = class extends Generator {
-  writing() {
+  writing () {
     this.fs.copyTpl(
       this.templatePath('pipeline.yml.tpl'),
       this.destinationPath('./.buildkite/pipeline.yml'),

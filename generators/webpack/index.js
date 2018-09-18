@@ -2,7 +2,7 @@
 const Generator = require('yeoman-generator');
 
 module.exports = class extends Generator {
-  writing() {
+  writing () {
     const {
       kebabCaseName,
       snakeCaseName,
@@ -10,7 +10,7 @@ module.exports = class extends Generator {
       port
     } = this.options;
 
-    ['development','staging','production'].forEach(env => {
+    ['development','staging','production'].forEach((env) => {
       this.fs.copyTpl(
         this.templatePath('env/env.js.tpl'),
         this.destinationPath(`./config/env/env.${env}.js`),
@@ -20,14 +20,14 @@ module.exports = class extends Generator {
 
     this.fs.copyTpl(
       this.templatePath('env/index.js.tpl'),
-      this.destinationPath(`./config/env/index.js`),
+      this.destinationPath('./config/env/index.js'),
       {
         kebabCaseName,
         port
       }
     );
 
-    ['aliases','config'].forEach(file => {
+    ['aliases','config'].forEach((file) => {
       this.fs.copy(
         this.templatePath(`${file}.js.tpl`),
         this.destinationPath(`./config/${file}.js`),
@@ -42,7 +42,7 @@ module.exports = class extends Generator {
       }
     );
 
-    ['development', 'production'].forEach(env => {
+    ['development', 'production'].forEach((env) => {
       this.fs.copyTpl(
         this.templatePath(`webpack.${env}.js.tpl`),
         this.destinationPath(`./config/webpack.${env}.js`),
