@@ -4,7 +4,7 @@
       queue: <%= kebabCaseName %>-agent
     plugins:
       docker-compose#v2.2.0:
-        run: <%= kebabCaseName %>
+        run: <%= snakeCaseName %>
         config: docker-compose.yml
 
   - wait
@@ -15,5 +15,5 @@
       queue: <%= kebabCaseName %>-agent
     plugins:
       docker-compose#v2.2.0:
-        run: <%= kebabCaseName %>
+        run: <%= snakeCaseName %>
         config: docker-compose.buildkite.yml
