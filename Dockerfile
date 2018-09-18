@@ -13,6 +13,6 @@ RUN apt-get update && \
   apt-get update && \
   apt-get -y install yarn
 
-COPY package.json .
-RUN yarn install
 COPY . .
+
+RUN yarn install
