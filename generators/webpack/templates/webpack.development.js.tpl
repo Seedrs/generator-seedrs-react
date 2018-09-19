@@ -2,11 +2,10 @@ const webpack = require('webpack');
 const merge = require('webpack-merge');
 const common = require('./webpack.common.js');
 <% if (embeddable) {%>
-const BundleScriptTagPlugin = require('@seedrs/bundle-script-tag-plugin');
-const { build, appPublic } = require('./paths');
+const { appPublic } = require('./paths');
 <% } else {%>
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { build, appHtml, appPublic } = require('./paths');
+const { appHtml, appPublic } = require('./paths');
 <% } %>
 const { HOST } = require('./config');
 const { publicPath } = require('./env');

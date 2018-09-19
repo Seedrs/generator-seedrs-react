@@ -43,29 +43,28 @@ module.exports = merge(common, {
     }),
 
 <% if (embeddable) {%>
-  new BundleScriptTagPlugin.default({
-    prefix: appName,
-    publicPath,
-    output: build
-  })
-<% } else {%>
-  new HtmlWebpackPlugin({
-      inject: true,
-      template: appHtml,
-      minify: {
-        removeComments: true,
-        collapseWhitespace: true,
-        removeRedundantAttributes: true,
-        useShortDoctype: true,
-        removeEmptyAttributes: true,
-        removeStyleLinkTypeAttributes: true,
-        keepClosingSlash: true,
-        minifyJS: true,
-        minifyCSS: true,
-        minifyURLs: true,
-      },
+    new BundleScriptTagPlugin.default({
+      prefix: appName,
+      publicPath,
+      output: build
     })
+<% } else {%>
+    new HtmlWebpackPlugin({
+        inject: true,
+        template: appHtml,
+        minify: {
+          removeComments: true,
+          collapseWhitespace: true,
+          removeRedundantAttributes: true,
+          useShortDoctype: true,
+          removeEmptyAttributes: true,
+          removeStyleLinkTypeAttributes: true,
+          keepClosingSlash: true,
+          minifyJS: true,
+          minifyCSS: true,
+          minifyURLs: true,
+        },
+      })
 <% } %>
   ]
 });
-
