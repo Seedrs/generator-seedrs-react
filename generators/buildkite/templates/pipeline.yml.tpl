@@ -16,4 +16,4 @@
     plugins:
       docker-compose#v2.2.0:
         run: <%= snakeCaseName %>
-        config: docker-compose.buildkite.yml
+        config: docker-compose.yml

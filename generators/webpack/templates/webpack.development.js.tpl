@@ -32,7 +32,7 @@ module.exports = merge(common, {
   },
 
   plugins: [
-    new webpack.NamedModulesPlugin()
+    new webpack.NamedModulesPlugin(),
   <% if (!embeddable) { %>
     new HtmlWebpackPlugin({
       inject: true,
