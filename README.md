@@ -19,6 +19,13 @@ With yarn
 yarn global add yo @seedrs/generator-seedrs-react
 ```
 
+Then create your directory and move into it
+
+```bash
+mkdir <app_name>
+cd <app_name>
+```
+
 Then generate your new project:
 
 ```bash
@@ -90,6 +97,12 @@ src/
   ├──__tests__/
   │    │
   │    └─ app.test.js
+  │
+  ├──components/
+  │    │
+  │    └─ app/
+  │       │
+  │       └─ App.js
   │
   └── <app_name>.js
 Dockerfile
