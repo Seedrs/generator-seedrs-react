@@ -9,5 +9,10 @@ module.exports = class extends Generator {
         kebabCaseName: this.options.kebabCaseName
       }
     );
+
+    this.fs.copyTpl(
+      this.templatePath('app_component.js.tpl'),
+      this.destinationPath('./src/components/app/App.js')
+    );
   }
 };
