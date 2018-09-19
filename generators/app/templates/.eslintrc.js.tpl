@@ -21,11 +21,10 @@ module.exports = {
     "@seedrs/eslint-config-seedrs-react"
   ],
   "parserOptions": {
-    "ecmaVersion": 6,
+    "ecmaVersion": 2018,
     "sourceType": "module",
     "ecmaFeatures": {
-      "jsx": true,
-      "experimentalObjectRestSpread": true
+      "jsx": true
     }
   },
   "plugins": ["jest"]
