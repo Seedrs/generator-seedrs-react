@@ -34,7 +34,7 @@ describe('generator-seedrs-react:app', () => {
       assert.JSONFileContent('package.json',{
         name: 'seedrs-react-project',
         scripts: {
-          start: 'webpack-dev-server --config config/webpack.development.js --hot --inline',
+          start: 'webpack-dev-server --config config/webpack.development.js --hot',
           lint: 'eslint src/**/*.js',
           test: 'node scripts/test.js --env=jsdom'
         },
@@ -72,7 +72,7 @@ describe('generator-seedrs-react:app', () => {
           'eslint-plugin-react': '^7.7.0',
           'html-webpack-plugin': '^3.2.0',
           jest: '^22.4.3',
-          'react-hot-loader': '^4.1.1',
+          'react-hot-loader': '^4.3.8',
           'regenerator-runtime': '^0.12.1',
           webpack: '^4.6.0',
           'webpack-cli': '^2.0.15',

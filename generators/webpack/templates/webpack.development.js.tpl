@@ -8,14 +8,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { appHtml, appPublic } = require('./paths');
 <% } %>
 const { HOST } = require('./config');
-const { publicPath } = require('./env');
 
 module.exports = merge(common, {
   mode: 'development',
   entry: {
     <%= snakeCaseName %>: [
-      'react-hot-loader/patch',
-      `webpack-dev-server/client?${publicPath}`,
       'babel-polyfill',
       './src/<%= snakeCaseName %>.js'
     ]
@@ -26,11 +23,9 @@ module.exports = merge(common, {
     disableHostCheck: true,
     host: HOST,
     port: <%= port %>,
-    hot: true,
-    inline: true,
     contentBase: appPublic,
     compress: true,
-    headers: { "Access-Control-Allow-Origin": "*" },
+    headers: { 'Access-Control-Allow-Origin': '*' },
     allowedHosts: [
       '.seedrs.local'
     ]
