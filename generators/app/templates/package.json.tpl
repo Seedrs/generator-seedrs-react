@@ -2,6 +2,7 @@
   "name": "<%= name %>",
   "scripts": {
     "start": "webpack-dev-server --config config/webpack.development.js --hot",
+    "build": "NODE_ENV=production node scripts/build.js",
     "lint": "eslint src/**/*.js",
     "test": "node scripts/test.js --env=jsdom"
   },
@@ -37,6 +38,7 @@
     "eslint-plugin-import": "^2.11.0",
     "eslint-plugin-jest": "^21.15.1",
     "eslint-plugin-react": "^7.7.0",
+    "fs-extra": "^7.0.0",
     "html-webpack-plugin": "^3.2.0",
     "jest": "^22.4.3",
     "react-hot-loader": "^4.3.8",
