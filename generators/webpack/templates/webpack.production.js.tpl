@@ -20,7 +20,7 @@ module.exports = merge(common, {
 
   entry: {
     web: [
-      'babel-polyfill',
+      '@babel/polyfill',
       './src/<%= snakeCaseName %>.js'
     ]
   },
