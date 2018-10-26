@@ -20,6 +20,7 @@ module.exports = {
     "@seedrs/eslint-config-seedrs-base",
     "@seedrs/eslint-config-seedrs-react"
   ],
+  "parser": "babel-eslint",
   "parserOptions": {
     "ecmaVersion": 2018,
     "sourceType": "module",

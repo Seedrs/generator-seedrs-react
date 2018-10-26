@@ -7,6 +7,7 @@
     "test": "node scripts/test.js --env=jsdom"
   },
   "dependencies": {
+    "@babel/polyfill": "7.0.0",
     "normalizr": "^3.2.4",
     "polished": "^1.9.2",
     "prop-types": "^15.6.1",
@@ -20,15 +21,17 @@
     "styled-components": "^3.2.6"
   },
   "devDependencies": {
+    "@babel/core": "7.1.2",
+    "@babel/plugin-proposal-object-rest-spread": "7.0.0",
+    "@babel/plugin-transform-react-jsx": "7.0.0",
+    "@babel/preset-env": "7.1.0",
+    "@babel/preset-react": "7.0.0",
     "@seedrs/eslint-config-seedrs-base": "^1.1.0",
     "@seedrs/eslint-config-seedrs-react": "^1.0.0",
-    "babel-core": "^6.26.0",
-    "babel-jest": "^22.4.3",
-    "babel-loader": "^7.1.4",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-polyfill": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-react": "^6.24.1",
+    "babel-core": "^7.0.0-bridge",
+    "babel-eslint": "10.0.1",
+    "babel-jest": "23.6.0",
+    "babel-loader": "8.0.4",
     "compression-webpack-plugin": "^1.1.11",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",

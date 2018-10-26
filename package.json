@@ -5,7 +5,7 @@
   "author": {
     "name": "Seedrs",
     "email": "tech@seedrs.com",
-    "url": "www.seedrs.com"
+    "url": "https://www.seedrs.com"
   },
   "files": [
     "generators"
