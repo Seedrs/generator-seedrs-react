@@ -80,7 +80,7 @@ describe('generator-seedrs-react:app', () => {
           'react-hot-loader': '^4.3.8',
           'regenerator-runtime': '^0.12.1',
           webpack: '^4.6.0',
-          'webpack-cli': '^2.0.15',
+          'webpack-cli': '^3.1.2',
           'webpack-dev-server': '^3.1.3',
           'webpack-merge': '^4.1.2'
         },
