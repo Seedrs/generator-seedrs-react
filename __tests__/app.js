@@ -36,7 +36,7 @@ describe('generator-seedrs-react:app', () => {
         scripts: {
           start: 'webpack-dev-server --config config/webpack.development.js --hot',
           build: 'NODE_ENV=production node scripts/build.js',
-          lint: 'eslint src/**/*.js',
+          lint: 'eslint src',
           test: 'node scripts/test.js --env=jsdom'
         },
         dependencies: {
